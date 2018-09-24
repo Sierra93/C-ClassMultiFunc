@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassTwoConst
+{
+    public class Chisla  
+    {
+        public static int one = 2;
+        public static int two = 3;
+        public static int res;
+        public static int max;
+
+        public static void Display()
+        {
+            Console.WriteLine("First value: " + one);
+            Console.WriteLine("Two value: " + two);
+
+            res = one + two;
+            Console.WriteLine("Sum: " + res);
+
+            max = one > two ? max = one : max = two;
+            Console.WriteLine("Max value: " + max);
+        }
+
+        public static void EditDisplay()
+        {
+            Console.Write("New value for first: ");
+            var a = int.Parse(Console.ReadLine());
+
+            Console.Write("New value for two: ");
+            var b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Now first value: " + a);
+            Console.WriteLine("Now two value: " + b);
+
+            var result = 0;
+
+            result = a + b;
+            Console.WriteLine("Sum: " + result);
+
+            var max = 0;
+
+            max = a > b ? max = a : max = b;
+            Console.WriteLine("Max value: " + max);
+        }
+    }
+
+    public class Program : Chisla
+    {
+        public static void Main()
+        {
+            Display();
+            EditDisplay();
+            Console.ReadKey();
+        }
+    }
+}
